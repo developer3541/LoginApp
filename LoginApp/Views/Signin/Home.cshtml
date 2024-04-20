@@ -1,0 +1,206 @@
+﻿@model Welcome
+<head>
+    <style>
+        /* PRESETS  */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=100");
+            background-position-y: -120px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            height: 100vh;
+            overflow-y: hidden;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER  */
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 900px;
+            margin: 0 auto;
+            animation: fade-in 0.4s;
+        }
+
+        .logo {
+            color: rgba(225, 225, 225, 1);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav {
+            padding: 20px 0;
+        }
+
+        .nav-list {
+            display: flex;
+            column-gap: 10px;
+        }
+
+        .nav-item {
+            margin-left: 25px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(225, 225, 225, 0.7);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+            .nav-link:hover {
+                color: rgba(225, 225, 225, 1);
+            }
+
+        /* MAIN  */
+
+        .main {
+            color: #fff;
+            text-align: center;
+            margin-top: 0px;
+            animation: fade-in 0.4s 0.1s backwards;
+        }
+
+        .heading {
+            font-size: 65px;
+            font-weight: 700;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+            line-height: 0.9;
+        }
+
+        .text {
+            max-width: 630px;
+            font-size: 25px;
+            line-height: 1.4;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.7;
+        }
+
+        .form {
+            margin-top: 40px;
+        }
+
+        .input {
+            width: 511px;
+            height: 64px;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            opacity: 0.8;
+            font: inherit;
+            padding: 0;
+            padding-left: 10px;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+
+            .input:focus {
+                opacity: 1;
+            }
+
+            .input::placeholder {
+                color: #000;
+            }
+
+        .btn {
+            height: 64px;
+            width: 130px;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            background-color: #000;
+            font: inherit;
+            margin-left: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+            .btn:hover {
+                cursor: pointer;
+                background-color: #353535;
+            }
+
+        /* FOOTER */
+
+        .footer {
+            display: flex;
+            align-items: center;
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #fff;
+            opacity: 0.8;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-top: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fade-in 0.4s 0.2s backwards;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <p class="logo">Evento</p>
+        @*<nav class="nav">
+        <ul class="nav-list">
+        <li class="nav-item">
+        <a href="/Home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+        <a href="/Links" class="nav-link">Links</a>
+        </li>
+        <li class="nav-item">
+        <a href="/Signin" class="nav-link">SignOut</a>
+        </li>
+        </ul>
+        </nav>*@
+    </header>
+    <br>
+    <br>
+    <br>
+    <main class="main">
+        <h1 class="heading">Welcome @Model.FirstName @Model.LastName</h1>
+        <p class="text">Here you will find your account related activities</p>
+        <form class="form">
+            <input type="text" class="input" placeholder='Find your features'>
+            <button class="btn">Search</button>
+        </form>
+    </main>
+</body>

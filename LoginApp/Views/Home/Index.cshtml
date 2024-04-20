@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RegistrationForm_v1 by Colorlib</title>
+
+    <link rel="stylesheet" href="/css/site.css">
+
+    <link rel="stylesheet" href="/css/site.css">
+    <meta name="robots" content="noindex, follow">
+</head>
+<body>
+    <div class="wrapper" style="background-image: url('images/bg-registration-form-1.jpg');">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="~/images/ubl.jpg" />
+            </div>
+            <form action="/Home/Register" asp-antiforgery="true">
+                <h3>Registration Form</h3>
+                <div class="form-group">
+                    <input type="text" name="FirstName" placeholder="First Name" class="form-control">
+                    <input type="text" name="LastName" placeholder="Last Name" class="form-control">
+                </div>
+                <div class="form-wrapper">
+                    <input type="text" name="Username" placeholder="Username" class="form-control">
+                    <i class="zmdi zmdi-account"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="number" name="Age" placeholder="Age" class="form-control">
+                    <i class="zmdi zmdi-email"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="email" name="Email" placeholder="Email Address" class="form-control">
+                    <i class="zmdi zmdi-email"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="date" name="DOB" placeholder="Date of Birth" class="form-control">
+                    <i class="zmdi zmdi-email"></i>
+                </div>
+                <div class="form-wrapper">
+                    <select name="Gender" id="" class="form-control">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="femal">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+                </div>
+                <div class="form-wrapper">
+                    <select name="EducationLevel" id="" class="form-control">
+                        <option value="" disabled selected>Education Level</option>
+                        <option value="Matric">Matric</option>
+                        <option value="Inter">Inter</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="Masters">Masters</option>
+                        <option value="PHD">PHD</option>
+                    </select>
+                    <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="password" name="Password" placeholder="Password" class="form-control">
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="password" name="CPassword" placeholder="Confirm Password" class="form-control">
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <button onclick="onsubmit">
+                    Register
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"870a48310f26c8fc","version":"2024.3.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+</body>
+</html>
